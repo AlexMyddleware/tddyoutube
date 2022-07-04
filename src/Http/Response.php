@@ -46,4 +46,11 @@ class Response
     {
         $this->content = $content;
     }
+
+    public function send()
+    {
+        foreach ($this->headers as $key => $value) {
+            header("$key: $value");
+        }
+    }
 }

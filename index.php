@@ -11,6 +11,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $name = $_GET['name'];
 
+
+//create response with caracs
 $response = new Response();
 
 $response->setHeaders([
@@ -19,5 +21,4 @@ $response->setHeaders([
 
 $response->setStatusCode(200);
 
-http_response_code(200);
-echo "Hello $name";
+$response->setContent("Hello $name");
