@@ -13,4 +13,10 @@ class IndexTest extends TestCase
 
         $this->assertEquals("Hello alexon", $resultat);
     } */
+
+    public function test_homepage_says_hello()
+    {
+        $controller =  new \Twitter\Controller\HelloController();
+        $response = $controller->hello();
+    }
 }
