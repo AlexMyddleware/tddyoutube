@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" value="vendor/bin/phpunit tests --colors=always" id="input1">
+<button onclick="myFunction(id1)">Copy text</button>
+<br>
+<br>
+<br>
+<input type="text" value="cd C:\laragon\www\crm\src\cache" id="input2">
+<button onclick="myFunction(id2)">Copy text</button>
+<br>
+<br>
+<br>
+<input type="text" value=".\test.ps1" id="input3">
+<button onclick="myFunction(id3)">Copy text</button>
+
+<script>
+id1 = "input1";
+id2 = "input2";
+id3 = "input3";
+
+function myFunction(id) {
+  /* Get the text field */
+  var copyText = document.getElementById(id);
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+//   alert("Copied the text: " + copyText.value);
+}
+</script>
+
+</body>
+</html>
