@@ -13,6 +13,11 @@ $name = $_GET['name'];
 
 $response = new Response();
 
-header('Content-type: text/html');
+$response->setHeaders([
+    'content-type' => 'text/html'
+]);
+
+$response->setStatusCode(200);
+
 http_response_code(200);
-echo "hello $name";
+echo "Hello $name";
