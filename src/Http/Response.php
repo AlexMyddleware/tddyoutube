@@ -1,8 +1,9 @@
-<?php 
+<?php
 
 namespace Twitter\Http;
 
-class Response {
+class Response
+{
     protected string $content = "";
     protected array $headers = [];
     protected int $statusCode = 200;
@@ -14,32 +15,35 @@ class Response {
         $this->headers = $headers;
     }
     //statuscode
-    public function getStatusCode(): int {
+    public function getStatusCode(): int
+    {
         return $this->statusCode;
     }
 
-    public function setStatusCode(int $statusCode): int {
+    public function setStatusCode(int $statusCode)
+    {
         $this->statusCode = $statusCode;
     }
 
     //headers
-    public function getHeaders(): array {
+    public function getHeaders(): array
+    {
         return $this->headers;
     }
 
-    public function setHeaders(array $headers): array {
+    public function setHeaders(array $headers)
+    {
         $this->headers = $headers;
     }
 
     //content
-    public function getContent(): string {
+    public function getContent(): string
+    {
         return $this->content;
     }
 
-    public function setContent(string $content): string {
+    public function setContent(string $content)
+    {
         $this->content = $content;
     }
-
-
 }
-
