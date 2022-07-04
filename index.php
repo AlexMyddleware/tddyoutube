@@ -22,3 +22,5 @@ $response->setHeaders([
 $response->setStatusCode(200);
 
 $response->setContent("Hello $name");
+
+$response->send();

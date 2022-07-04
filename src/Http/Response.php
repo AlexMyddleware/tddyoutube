@@ -52,5 +52,9 @@ class Response
         foreach ($this->headers as $key => $value) {
             header("$key: $value");
         }
+
+        http_response_code($this->statusCode);
+
+        echo $this->content;
     }
 }

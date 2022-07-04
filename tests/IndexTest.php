@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class IndexTest extends TestCase
 {
-    public function test_index_shows_good_hello()
+    /* public function test_index_shows_good_hello()
     {
         $_GET['name'] = "alexon";
         ob_start();
@@ -12,5 +12,5 @@ class IndexTest extends TestCase
         $resultat = ob_get_clean();
 
         $this->assertEquals("Hello alexon", $resultat);
-    }
+    } */
 }
