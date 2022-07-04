@@ -16,7 +16,14 @@ class IndexTest extends TestCase
 
     public function test_homepage_says_hello()
     {
+        // given, situation initiale
+        $_GET['name'] = 'alexon';
+
+        // when, elem perturbateur
         $controller =  new \Twitter\Controller\HelloController();
         $response = $controller->hello();
+
+        // then, alors
+        $this->assertEquals("Hello alexon", $response->getContent());
     }
 }

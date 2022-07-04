@@ -8,6 +8,7 @@ class HelloController
 {
     public function hello(): Response
     {
-        return new Response();
+        $name = $_GET['name'];
+        return new Response("Hello $name");
     }
 }
